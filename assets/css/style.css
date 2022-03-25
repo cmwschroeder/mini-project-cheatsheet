@@ -2,10 +2,11 @@
     --white: #fff;
     --textColor: magenta;
     --border-radius: 6px;
+    --backgroundColor: #404040;
 }
 
 body {
-    background-color: #404040;
+    background-color: var(--backgroundColor);
 }
 
 h1 {
@@ -28,12 +29,28 @@ h2 {
     font-weight: bold;
 }
 
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 #cards p {
     color: var(--textColor);
 }
 
 #cards section {
     border: 1px dashed var(--white);
+    margin: 1%;
+    flex: 0 0 400px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#cards h2 {
+    position: relative;
+    margin-top: -20px;
+    background-color: var(--backgroundColor);
 }
 
 pre {
@@ -43,4 +60,28 @@ pre {
     );
     color: var(--white);
     border-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 991px) {
+    #cards section {
+        flex: 0 0 300px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #cards {
+        flex-direction: column;
+    }
+
+    #cards section {
+        flex: 0 0 200px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: small;
+    }
 }
