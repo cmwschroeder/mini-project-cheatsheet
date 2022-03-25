@@ -9,7 +9,7 @@ body {
     background-color: var(--backgroundColor);
 }
 
-h1 {
+h1, h3 {
     color: var(--textColor);
     text-align: center;
 }
@@ -27,6 +27,7 @@ h2 {
     border-radius: var(--border-radius);
     padding: 4px;
     font-weight: bold;
+    transition: all 0.5s ease-in-out; 
 }
 
 #cards {
@@ -45,7 +46,15 @@ h2 {
     flex: 0 0 400px;
     padding-left: 12px;
     padding-right: 12px;
+    transition: all 0.5s ease-in-out; 
 }
+
+#cards section:hover,
+#cards section:hover h2 {
+        box-shadow: inset 0px 0px 8px
+      rgba(232, 102, 236, 1), 0 0 15px
+      rgba(232, 102, 236, 1);
+      }
 
 #cards h2 {
     position: relative;
@@ -60,6 +69,7 @@ pre {
     );
     color: var(--white);
     border-radius: var(--border-radius);
+    user-select: all;
 }
 
 @media screen and (max-width: 991px) {
