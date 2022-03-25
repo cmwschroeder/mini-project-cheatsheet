@@ -1,6 +1,7 @@
 :root {
     --white: #fff;
     --textColor: magenta;
+    --border-radius: 6px;
 }
 
 body {
@@ -21,10 +22,18 @@ h1 {
 
 h2 {
     color: var(--textColor);
+    border: 1px solid var(--white);
+    border-radius: var(--border-radius);
+    padding: 4px;
+    font-weight: bold;
 }
 
 #cards p {
     color: var(--textColor);
+}
+
+#cards section {
+    border: 1px dashed var(--white);
 }
 
 pre {
@@ -33,4 +42,5 @@ pre {
         rgba(232, 102, 236, 0.6) 100%
     );
     color: var(--white);
+    border-radius: var(--border-radius);
 }
